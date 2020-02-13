@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collection view data source: header &amp; footer in swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//MARK: - ------ Zachary - UICollectionViewDataSource: header &amp; footer ------
+    //定义并返回每个headerView或footerView
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -&gt; UICollectionReusableView {
+        if kind==UICollectionView.elementKindSectionHeader { //头视图
+            let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerViewIdentifier, for: indexPath)
+            headerView.backgroundColor = magentaColor
+            
+            var title = headerView.viewWithTag(1000) as? UILabel
+            if title==nil {
+                title = UILabel()
+                title?.frame = .init(x: 15, y: 5, width: headerView.width-15*2, height: headerView.height-5*2)
+                title?.tag = 1000
+                title?.font = FONT_S(14)
+                title?.textColor = blackColor
+                title?.textAlignment = .center
+                headerView.addSubview(title!)
+            }
+            
+            title?.text = "header view - \(indexPath.section)"
+            
+            return headerView
+        }
+        else { //尾视图
+            let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerViewIdentifier, for: indexPath)
+            footerView.backgroundColor = greenColor
+            
+            var title = footerView.viewWithTag(2000) as? UILabel
+            if title==nil {
+                title = UILabel()
+                title?.frame = .init(x: 15, y: 5, width: footerView.width-15*2, height: footerView.height-5*2)
+                title?.tag = 2000
+                title?.font = FONT_S(14)
+                title?.textColor = blackColor
+                title?.textAlignment = .center
+                footerView.addSubview(title!)
+            }
+            
+            title?.text = "footer view - \(indexPath.section)"
+            
+            return footerView
+        }
+    }
+    
+    /*
+     1. 如果布局没有为headerView或footerView设置size的话(默认size为CGSizeZero)，则该方法不会被调用。
+     2. 可以通过设置UICollectionViewFlowLayout的headerReferenceSize和footerReferenceSize属性来全局控制size。
+     或者通过重载以下代理方法来分别设置
+     */
+    //头视图宽高
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -&gt; CGSize {
+        return CGSize.init(width: 0, height: 30)
+    }
+    
+    //尾视图宽高
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -&gt; CGSize {
+        return CGSize.init(width: 0, height: 30)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, canMoveItemAt indexPath: IndexPath) -&gt; Bool {
+        return true
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B1D6C445-3DB2-4252-9A84-35A78525D244</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view data source: header &amp; footer in swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

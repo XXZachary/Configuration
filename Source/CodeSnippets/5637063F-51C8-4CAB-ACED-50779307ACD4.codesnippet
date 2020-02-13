@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collection view data source: header &amp; footer in oc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#if 1
+#pragma mark - Zachary - UICollectionViewDataSource: header &amp; footer
+//定义并返回每个headerView或footerView
+- (UICollectionReusableView *)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath {
+    
+    if ([kind isEqualToString: UICollectionElementKindSectionHeader]) { //头视图
+        UICollectionReusableView *headerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:headerViewIdentifier forIndexPath:indexPath];
+        headerView.backgroundColor = [UIColor magentaColor];
+        //coding..
+        
+        UILabel *title = [headerView viewWithTag:100];
+        if (title == nil) {
+            title = [[UILabel alloc] init];
+            title.frame = CGRectMake(15, 5, headerView.frame.size.width-15*2, headerView.frame.size.height-10);
+            title.backgroundColor = [UIColor clearColor];
+            title.textColor = [UIColor blackColor];
+            title.tag = 100;
+            title.text = @"headerView";
+            title.textAlignment = NSTextAlignmentCenter;
+            [headerView addSubview:title];
+        }
+        
+        title.text = [title.text stringByAppendingFormat:@" - %ld", indexPath.section];
+        
+        return headerView;
+    }
+    else if ([kind isEqualToString: UICollectionElementKindSectionFooter]) { //脚视图
+        UICollectionReusableView *footerView = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:footerViewIdentifier forIndexPath:indexPath];
+        footerView.backgroundColor = [UIColor greenColor];
+        //coding..
+        
+        UILabel *title = [footerView viewWithTag:101];
+        if (title == nil) {
+            title = [[UILabel alloc] init];
+            title.frame = CGRectMake(15, 5, footerView.frame.size.width-15*2, footerView.frame.size.height-10);
+            title.backgroundColor = [UIColor clearColor];
+            title.textColor = [UIColor blackColor];
+            title.tag = 101;
+            title.text = @"footerView";
+            title.textAlignment = NSTextAlignmentCenter;
+            [footerView addSubview:title];
+        }
+        
+        title.text = [title.text stringByAppendingFormat:@" - %ld", indexPath.section];
+        
+        return footerView;
+    }
+    
+    return nil;
+}
+
+/*
+ 1. 如果布局没有为headerView或footerView设置size的话(默认size为CGSizeZero)，则该方法不会被调用。
+ 2. 可以通过设置UICollectionViewFlowLayout的headerReferenceSize和footerReferenceSize属性来全局控制size。
+ 或者通过重载以下代理方法来分别设置
+ */
+//头视图宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section {
+    return CGSizeMake(0, 30);
+    //    return CGSizeZero;
+}
+
+//脚视图宽高
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout referenceSizeForFooterInSection:(NSInteger)section {
+    return CGSizeMake(0, 30);
+    //    return CGSizeZero;
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView canMoveItemAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView moveItemAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath {
+    
+}
+#endif</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5637063F-51C8-4CAB-ACED-50779307ACD4</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view data source: header &amp; footer in oc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>my structure in method of oc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>#pragma mark - Zachary - 
+
+
+#pragma mark - Zachary - notification action
+
+
+#pragma mark - Zachary - action
+
+
+#pragma mark - Zachary - build layout
+- (void)buildLayout {
+    
+}
+
+#pragma mark - Zachary - loading
+
+
+#pragma mark - Zachary - getter
+
+
+#pragma mark - Zachary - setter
+
+
+#pragma mark - Zachary - method
+
+
+#pragma mark - Zachary - server
+
+
+#pragma mark - Zachary - system
+
+
+#pragma mark - Zachary - dealloc
+- (void)dealloc {
+    
+}
+
+#pragma mark - Zachary - other</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>293DFB0C-1492-4C62-8C7F-C73AEA8951B7</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>my structure in method of oc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

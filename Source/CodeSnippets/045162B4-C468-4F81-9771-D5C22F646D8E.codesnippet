@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collection view delegate: copy &amp; paste in swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//MARK: - ------ Zachary - UICollectionViewDelegate: copy &amp; paste ------
+    // 长按某item: 弹出copy和paste的菜单
+    func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -&gt; Bool {
+        return true
+    }
+    
+    //使copy和paste有效
+    func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -&gt; Bool {
+        if (NSStringFromSelector(action)=="copy:") || (NSStringFromSelector(action)=="paste:") {
+            return true
+        }
+        
+        return false
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
+        if (NSStringFromSelector(action)=="copy:") { //执行拷贝
+            collectionView.performBatchUpdates({
+                //移出数据源
+                //移出对应的界面row
+            }, completion: nil)
+        }
+        else if (NSStringFromSelector(action)=="paste:") { //执行粘贴
+            
+        }
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>045162B4-C468-4F81-9771-D5C22F646D8E</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view delegate: copy &amp; paste in swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>create table view in swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    var tableView = UITableView.init(frame: .zero, style: .grouped)
+    func loadTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.separatorStyle = .none
+        tableView.tableFooterView = .init()
+        tableView.backgroundColor = clearColor
+        self.view.addSubview(tableView)
+        
+        tableView.snp.makeConstraints { (make) in
+            make.left.right.top.equalTo(self.view)
+            make.bottom.equalTo(self.view.snp.bottom).offset(-SafeArea_Bottom_H)
+        }
+        
+        if #available(iOS 11.0, *) {
+            tableView.contentInsetAdjustmentBehavior = .never
+        } else {
+            // Fallback on earlier versions
+            self.automaticallyAdjustsScrollViewInsets = false
+        }
+        
+        let footerView = UIView.init(frame: CGRect.init(x: 0.0, y: 0.0, width: Double(SCREEN_WIDTH), height: SafeArea_Bottom_H))
+        footerView.backgroundColor = .white
+        tableView.tableFooterView = footerView
+    }</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>3D95104A-059A-43F9-BE76-61A60239DDF5</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>create table view in swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>my structure in import of Swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>TopLevel</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//MARK: - ------ Zachary - variable &amp; constant ------
+
+
+//MARK: - ------ Zachary - custom extension ------
+
+
+//MARK: - ------ Zachary - custom protocol ------
+
+
+//MARK: - ------ Zachary - custom enum ------
+
+
+//MARK: - ------ Zachary - custom struct ------
+
+
+//MARK: - ------ Zachary - custom class ------
+
+
+//MARK: - ------ Zachary - main class ------</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>06784AAF-5B72-4895-B739-F050C496C027</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>my structure in import of Swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

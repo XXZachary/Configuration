@@ -1,0 +1,56 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'kaiStart' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+  
+  pod 'QMUIKit'
+  pod 'YYKit'
+  
+  pod 'AFNetworking'
+  pod 'SDWebImage'
+  pod 'FLAnimatedImage'
+  pod 'Masonry'
+  pod 'MJRefresh'
+  pod 'MJExtension'
+  
+  pod 'MBProgressHUD'
+  pod 'M13ProgressSuite', '~> 1.2.9'
+  pod 'UAProgressView'#环形进度条
+  
+  pod 'TZImagePickerController'
+  pod 'IQKeyboardManager'
+  pod 'pop'
+  
+  pod 'AMapLocation'
+  pod 'WebViewJavascriptBridge', '~> 6.0'
+  pod 'UITableView+FDTemplateLayoutCell'
+  pod 'RSKImageCropper'
+  pod 'DTCoreText'
+  
+  pod 'WechatOpenSDK'
+  
+  pod 'UMCCommon'
+  pod 'UMCAnalytics'
+  pod 'UMCShare/UI'
+  pod 'UMCShare/Social/ReducedQQ'
+  pod 'UMCShare/Social/ReducedSina'
+  pod 'UMCShare/Social/Douban'
+  pod 'UMCShare/Social/ReducedWeChat'
+  
+  # Pods for kaiStart
+  
+  target 'kaiStartTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+  target 'kaiStartUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+end
+
+

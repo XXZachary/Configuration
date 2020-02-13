@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>table view delegate &amp; data source in Swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>//MARK: - ------ Zachary - UITableViewDataSource ------
+func numberOfSections(in tableView: UITableView) -&gt; Int {
+    return &lt;#Int#&gt;
+}
+
+func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int {
+    return &lt;#Int#&gt;
+}
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -&gt; UITableViewCell {
+    let identifier = "Zachary - Identifier"
+    
+    var cell = tableView.dequeueReusableCell(withIdentifier: identifier) as? &lt;#UITableViewCell#&gt;
+    if cell==nil {
+        cell = UITableViewCell.init(style: .default, reuseIdentifier: identifier)
+        cell?.selectionStyle = .none
+    }
+    //conding...
+    
+    
+    return cell!
+}
+
+//MARK: - ------ Zachary - UITableViewDelegate ------
+func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -&gt; UIView? {
+    let identifier = "Zachary - HeaderIdentifier"
+    
+    var header = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier)
+    if header==nil {
+        header = UITableViewHeaderFooterView.init(reuseIdentifier: identifier)
+        header?.contentView.backgroundColor = LINE_COLOR
+    }
+    //coding...
+    
+    return header
+}
+
+func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -&gt; UIView? {
+    let identifier = "Zachary - FooterIdentifier"
+    
+    var footer = tableView.dequeueReusableHeaderFooterView(withIdentifier: identifier)
+    if footer==nil {
+        footer = UITableViewHeaderFooterView.init(reuseIdentifier: identifier)
+        footer?.contentView.backgroundColor = LINE_COLOR
+    }
+    //coding...
+    
+    return footer
+}
+
+func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -&gt; CGFloat {
+    return 0.0
+}
+
+func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -&gt; CGFloat {
+    return 0.0
+}
+
+func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -&gt; CGFloat {
+    return &lt;#CGFloat#&gt;
+}
+
+func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>A66A88F5-B5A0-4BEB-A649-66A5721637A3</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>table view delegate &amp; data source in Swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

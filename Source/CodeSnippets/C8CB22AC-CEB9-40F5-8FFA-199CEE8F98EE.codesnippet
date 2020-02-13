@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>keyboard will show | hide in oc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>Preprocessor</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)keyboardWillShow:(NSNotification *)noti {
+    //获取键盘的高度
+    NSDictionary *userInfo = [noti userInfo];
+    NSValue *aValue = [userInfo objectForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardRect = [aValue CGRectValue];
+    int height = keyboardRect.size.height;
+    
+    //    XXZLog(@"height = %d", height);
+    
+    [UIView animateWithDuration:0.23 animations:^{
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+}
+
+- (void)keyboardWillHide:(NSNotification *)noti {
+    [UIView animateWithDuration:0.23 animations:^{
+        
+    } completion:^(BOOL finished) {
+        
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>C8CB22AC-CEB9-40F5-8FFA-199CEE8F98EE</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>keyboard will show | hide action in oc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

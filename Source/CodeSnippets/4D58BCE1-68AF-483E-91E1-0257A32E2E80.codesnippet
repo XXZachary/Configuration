@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collection view build in oc</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>- (void)loadCollectionView {
+    UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
+    layout.scrollDirection = UICollectionViewScrollDirectionVertical; //滚动方向
+    
+#if 0
+    layout.itemSize = CGSizeMake(200, 80);         //全局设置cell的size
+    layout.minimumLineSpacing = 15;                   //全局设置cell的行间距, 滚动方向的间距
+    layout.minimumInteritemSpacing = 100;          //全局设置cell的列间距
+    layout.sectionInset = UIEdgeInsetsMake(0, 0, 0, 0);     //全局设置cell距离上左下右的距离
+    layout.headerReferenceSize = CGSizeMake(0, 1);    //全局设置cell的头部size
+    layout.footerReferenceSize = CGSizeMake(0, 0);     //全局设置cell的头部size
+    //    layout.estimatedItemSize = CGSizeMake(0, 0); //自适应高度
+#endif
+    
+    _collectionView = [[UICollectionView alloc] initWithFrame:CGRectZero collectionViewLayout:layout];
+    _collectionView.delegate = self;
+    _collectionView.dataSource = self;
+    _collectionView.backgroundColor = WHITE_COLOR;
+    [self.view addSubview:_collectionView];
+    
+    [_collectionView mas_makeConstraints:^(MASConstraintMaker *make){
+        make.left.right.bottom.top.mas_equalTo(self.view);
+        //        make.top.mas_equalTo(self.view.mas_top).offset(20+44);
+    }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4D58BCE1-68AF-483E-91E1-0257A32E2E80</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view build in oc</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionPrefix</key>
+	<string>collection view build in swift</string>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>func loadCollectionView() {
+    let layout = UICollectionViewFlowLayout()
+    layout.scrollDirection = .horizontal //滚动方向
+    
+    #if false
+    layout.itemSize = .init(width: 200, height: 80) //全局设置cell的size
+    layout.minimumLineSpacing = 10; //全局设置cell的行间距, 滚动方向的间距
+    layout.minimumInteritemSpacing = 10; //全局设置cell的列间距
+    layout.sectionInset = .init(top: 0, left: 0, bottom: 0, right: 0) //全局设置cell距离上左下右的距离
+    layout.headerReferenceSize = .init(width: 0, height: 0) //全局设置cell的头部size
+    layout.footerReferenceSize = .init(width: 0, height: 0) //全局设置cell的尾部size
+    layout.estimatedItemSize = .init(width: 0, height: 0) //自适应高度
+    #endif
+    
+    collectionView = .init(frame: .zero, collectionViewLayout: layout)
+    collectionView?.delegate = self
+    collectionView?.dataSource = self
+    collectionView?.backgroundColor = .white
+    self.addSubview(collectionView!)
+    
+    collectionView?.snp.makeConstraints { (make) in
+        make.left.right.top.bottom.equalTo(self)
+    }
+    
+    registerCell(collectionView!)
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>D19AC7B2-C405-49EF-A6D9-64FAEBAB4082</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Swift</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>collection view build in swift</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
